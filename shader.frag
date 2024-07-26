@@ -260,7 +260,7 @@ void drawWoodenCube()
 
             // Perturbation vector in tangent space.
 
-            vec3 tanPerturbedNormal = normalize(vec3(p.x, p.y, sqrt(pow(MirrorRadius, 2) - p.y * p.y)));
+            vec3 tanPerturbedNormal = normalize(vec3(p.x, p.y, sqrt(pow(MirrorRadius, 2) - p.y * p.y - p.x * p.x)));
 
             // Transform perturbation vector to eye space.
             vec3 ecPerturbedNormal = tanPerturbedNormal.x * T + 
